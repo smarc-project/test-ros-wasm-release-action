@@ -1,8 +1,12 @@
 # Container image that runs your code
-FROM rostooling/setup-ros-docker:ubuntu-bionic-ros-melodic-ros-base-latest
+FROM alpine:latest
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY scripts /scripts
+COPY release-action /release-action
+COPY entrypoint.sh /entrypoint.sh
+
+RUN apk add --update --no-cache docker
+RUN ["chmod", "+x", "/entrypoint.sh"]
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/scripts/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
