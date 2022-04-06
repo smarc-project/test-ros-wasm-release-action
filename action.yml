@@ -1,0 +1,17 @@
+name: 'Test ROS release action'
+description: 'Build a ROS debian release using bloom'
+inputs:
+  ubuntu:  # id of input
+    description: 'Ubuntu version'
+    required: true
+    default: 'focal'
+  distro:  # id of input
+    description: 'ROS distro'
+    required: true
+    default: 'noetic'
+runs:
+  using: 'docker'
+  image: 'Dockerfile-${{ inputs.ubuntu }}-${{ inputs.distro }}'
+  args:
+    - ${{ inputs.ubuntu }}
+    - ${{ inputs.distro }}
