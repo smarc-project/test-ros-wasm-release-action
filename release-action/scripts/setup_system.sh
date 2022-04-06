@@ -3,6 +3,8 @@
 # Example usage: ./setup_system.sh noetic
 # Example usage: ./setup_system.sh melodic
 
+echo "Installing SMaRC for ROS $1"
+
 # Install SMaRC ROS system
 sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/sources.list.d/smarc-${1}-latest.list -o /etc/apt/sources.list.d/smarc-latest.list
 sudo curl https://raw.githubusercontent.com/smarc-project/rosinstall/master/rosdep/50-smarc-${1}.list -o /etc/ros/rosdep/sources.list.d/50-smarc.list
