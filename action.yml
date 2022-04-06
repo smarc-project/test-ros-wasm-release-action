@@ -11,7 +11,7 @@ inputs:
     default: 'noetic'
 runs:
   using: 'docker'
-  image: 'Dockerfile-${{ inputs.ubuntu }}-${{ inputs.distro }}'
+  image: 'Dockerfile-${{ github.event.inputs.ubuntu }}-${{ github.event.inputs.distro }}'
   args:
     - ${{ inputs.ubuntu }}
     - ${{ inputs.distro }}
