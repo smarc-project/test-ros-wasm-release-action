@@ -4,7 +4,7 @@ Do a simulated deb release of the ROS packages in the repo
 
 ## Inputs
 
-## `ubtunu`
+## `ubuntu`
 
 **Required** The ubuntu version to use. Default `"focal"`.
 
@@ -14,7 +14,9 @@ Do a simulated deb release of the ROS packages in the repo
 
 ## Example usage
 
+```
 uses: smarc-project/test-ros-release-action@v1
 with:
   ubuntu: 'focal'
   distro: 'noetic'
+```
