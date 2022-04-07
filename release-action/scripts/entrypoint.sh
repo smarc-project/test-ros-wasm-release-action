@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -el
 
 /scripts/setup_system.sh $DISTRO
 

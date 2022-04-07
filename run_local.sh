@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash
 
 git clone $1 repo
 

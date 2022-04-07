@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Example usage: ./setup_system.sh noetic
 # Example usage: ./setup_system.sh melodic

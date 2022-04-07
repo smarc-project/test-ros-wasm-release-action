@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Example usage: ./release_repos.sh focal noetic
 # Example usage: ./release_repos.sh bionic melodic
