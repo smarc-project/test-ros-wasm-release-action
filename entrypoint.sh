@@ -1,4 +1,4 @@
-#!/bin/bash -el
+#!/bin/sh -e
 
 UBUNTU=$1
 DISTRO=$2
