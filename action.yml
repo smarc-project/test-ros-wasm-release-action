@@ -23,7 +23,9 @@ runs:
         pwd
         ls
         echo ${GITHUB_WORKSPACE}
-        docker build -t release-action --build-arg ubuntu=${{ inputs.ubuntu }} --build-arg distro=${{ inputs.distro }} release-action
+        echo $${{ github.action_path }}
+        ls ${{ github.action_path }}
+        docker build -t release-action --build-arg ubuntu=${{ inputs.ubuntu }} --build-arg distro=${{ inputs.distro }} ${{ github.action_path }}/release-action
       shell: bash
     - id: run
       run: docker run --env GITHUB_WORKSPACE=${{ github.workspace }} -v ${{ github.workspace }}:${{ github.workspace }} release-action
