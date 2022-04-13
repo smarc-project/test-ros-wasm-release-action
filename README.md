@@ -15,7 +15,7 @@ Do a simulated deb release of the ROS packages in the repo
 ## Example usage
 
 ```
-uses: smarc-project/test-ros-release-action@v1
+uses: smarc-project/test-ros-release-action@v2.0.1
 with:
   ubuntu: 'focal'
   distro: 'noetic'
