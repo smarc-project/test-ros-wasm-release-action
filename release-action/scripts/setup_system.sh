@@ -18,4 +18,5 @@ fi
 rosdep update
 
 # Install necessary deps for bloom and deb packaging
+pip3 install setuptools==45.2.0 --no-input
 sudo apt install -y fakeroot dpkg-dev debhelper zip
