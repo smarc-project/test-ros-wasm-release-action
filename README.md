@@ -1,6 +1,6 @@
 # Test ROS release action
 
-Do a simulated deb release of the ROS packages in the repo
+Do a simulated deb release of the ROS WASM packages in the repo
 
 ## Inputs
 
